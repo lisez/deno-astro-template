@@ -18,7 +18,7 @@ export function addResource(resource: Resource): Promise<Resource> {
 
 export function listResources(): Promise<Resource[]> {
   return new Promise((resolve, _reject) => {
-    const resources = [];
+    const resources: Resource[] = [];
     for (const res of RESOURCES.values()) resources.push(res);
     resources.sort((a, b) => {
       const textA = a.title.toUpperCase();
